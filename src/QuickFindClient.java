@@ -2,6 +2,7 @@ class QuickFind {
     // Array to maintain the root of each nodes
     private final int[] root;
 
+    // O(n)
     // Initialize the root array to itself so that root of each node is itself
     public QuickFind(int size) {
         root = new int[size];
