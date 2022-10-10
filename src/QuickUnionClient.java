@@ -1,6 +1,6 @@
 class QuickUnion {
     // Array to maintain the root of each nodes
-    private int[] root;
+    private final int[] root;
 
     // O(n)
     // Initialize the root array to itself so that root of each node is itself
