@@ -1,4 +1,4 @@
-class OptimizedUnionFind {
+class UnionFind {
     // Array to store the parent of each node
     private final int[] root;
     // Array to store the rank of each node
@@ -7,7 +7,7 @@ class OptimizedUnionFind {
     // O(n)
     // Initialize the root array to itself so that root of each node is itself
     // Initialize the rank array to 1 so that rank of each node is 1 initially
-    public OptimizedUnionFind(int size) {
+    public UnionFind(int size) {
         root = new int[size];
         rank = new int[size];
         for (int i = 0; i < size; i++) {
@@ -51,7 +51,7 @@ class OptimizedUnionFind {
 
 public class OptimizedUnionFindClient {
     public static void main(String[] args) throws Exception {
-        OptimizedUnionFind unionFind = new OptimizedUnionFind(10);
+        UnionFind unionFind = new UnionFind(10);
         // 1-2-5-6-7 3-8-9 4
         unionFind.union(1, 2);
         unionFind.union(2, 5);
