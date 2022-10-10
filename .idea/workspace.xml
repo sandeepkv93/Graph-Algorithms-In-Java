@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="524942f4-0d16-4cfd-9b74-af658dbb18c9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DFSRecursiveAdjListClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DFSIterativeAdjListClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DFSRecursiveAdjListClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DFSRecursiveAdjListClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
