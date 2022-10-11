@@ -1,4 +1,4 @@
-class UnionFind {
+public class UnionFind {
     // Array to store the parent of each node
     private final int[] root;
     // Array to store the rank of each node
@@ -47,9 +47,7 @@ class UnionFind {
     public boolean connected(int x, int y) {
         return find(x) == find(y);
     }
-}
 
-public class OptimizedUnionFindClient {
     public static void main(String[] args) throws Exception {
         UnionFind unionFind = new UnionFind(10);
         // 1-2-5-6-7 3-8-9 4

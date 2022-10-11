@@ -1,10 +1,11 @@
-import java.util.Stack;
+import java.util.LinkedList;
+import java.util.Queue;
 
-class DFSIterativeAdjMatrix {
+public class BFSIterativeAdjMatrix {
     int v;
     int[][] adjMatrix;
 
-    public DFSIterativeAdjMatrix(int v) {
+    public BFSIterativeAdjMatrix(int v) {
         this.v = v;
         adjMatrix = new int[v][v];
     }
@@ -20,37 +21,35 @@ class DFSIterativeAdjMatrix {
         }
     }
 
-    public void dfs() {
+    public void bfs() {
         boolean[] visited = new boolean[v];
         for (int i = 0; i < v; i++) {
             if (!visited[i]) {
-                dfsUtil(visited, i);
+                bfsUtil(visited, i);
             }
         }
     }
 
-    private void dfsUtil(boolean[] visited, int source) {
+    private void bfsUtil(boolean[] visited, int source) {
         visited[source] = true;
-        Stack<Integer> stack = new Stack<>();
-        stack.push(source);
-        while(!stack.isEmpty()) {
-            int node = stack.pop();
+        Queue<Integer> queue = new LinkedList<>();
+        queue.offer(source);
+        while(!queue.isEmpty()) {
+            int node = queue.poll();
             System.out.print(node + " ");
-            for (int i = v - 1; i >= 0; --i) {
+            for (int i = 0; i < v; ++i) {
                 if (adjMatrix[node][i] == 1 && !visited[i]) {
-                    stack.push(i);
+                    queue.offer(i);
                     visited[i] = true;
                 }
             }
         }
     }
-}
 
-public class DFSIterativeAdjMatrixClient {
     public static void main(String[] args) {
-        DFSIterativeAdjMatrix graph = new DFSIterativeAdjMatrix(10);
+        BFSIterativeAdjMatrix graph = new BFSIterativeAdjMatrix(10);
         int[][] edges = {{0, 1}, {0, 2}, {1, 3}, {1, 4}, {4, 5}, {2, 5}, {2, 6}, {2, 7}, {8, 9}};
         graph.populateGraph(edges);
-        graph.dfs(); // 0 1 3 4 5 2 6 7 8 9
+        graph.bfs(); // 0 1 2 3 4 5 6 7 8 9
     }
 }

@@ -1,5 +1,5 @@
 
-class PathCompression {
+public class PathCompression {
     // Array to store the parent of each node
     private final int[] root;
 
@@ -37,9 +37,7 @@ class PathCompression {
     public boolean connected(int x, int y) {
         return find(x) == find(y);
     }
-}
 
-public class PathCompressionClient {
     public static void main(String[] args) throws Exception {
         PathCompression pathCompression = new PathCompression(10);
         // 1-2-5-6-7 3-8-9 4

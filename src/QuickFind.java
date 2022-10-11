@@ -1,4 +1,4 @@
-class QuickFind {
+public class QuickFind {
     // Array to maintain the root of each nodes
     private final int[] root;
 
@@ -37,9 +37,7 @@ class QuickFind {
     public boolean connected(int x, int y) {
         return find(x) == find(y);
     }
-}
 
-public class QuickFindClient {
     public static void main(String[] args) {
         QuickFind quickFind = new QuickFind(10);
         // 1-2-5-6-7 3-8-9 4
@@ -57,3 +55,4 @@ public class QuickFindClient {
         System.out.println(quickFind.connected(4, 9)); // true
     }
 }
+

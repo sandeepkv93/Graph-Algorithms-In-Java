@@ -1,4 +1,4 @@
-class DFSRecursiveAdjMatrix {
+public class DFSRecursiveAdjMatrix {
     int v;
     int[][] adjMatrix;
 
@@ -36,9 +36,7 @@ class DFSRecursiveAdjMatrix {
             }
         }
     }
-}
 
-public class DFSRecursiveAdjMatrixClient {
     public static void main(String[] args) {
         DFSRecursiveAdjMatrix graph = new DFSRecursiveAdjMatrix(10);
         int[][] edges = {{0, 1}, {0, 2}, {1, 3}, {1, 4}, {4, 5}, {2, 5}, {2, 6}, {2, 7}, {8, 9}};

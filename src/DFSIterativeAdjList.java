@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.Stack;
 
-class DFSIterativeAdjList {
+public class DFSIterativeAdjList {
     int v;
     LinkedList<Integer>[] adjList;
 
@@ -48,9 +48,7 @@ class DFSIterativeAdjList {
             }
         }
     }
-}
 
-public class DFSIterativeAdjListClient {
     public static void main(String[] args) {
         DFSIterativeAdjList graph = new DFSIterativeAdjList(10);
         int[][] edges = {{0, 1}, {0, 2}, {1, 3}, {1, 4}, {4, 5}, {2, 5}, {2, 6}, {2, 7}, {8, 9}};

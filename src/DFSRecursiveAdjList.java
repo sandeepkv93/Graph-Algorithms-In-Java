@@ -1,11 +1,9 @@
 import java.util.LinkedList;
-import java.util.Queue;
-
-class BFSIterativeAdjList {
+public class DFSRecursiveAdjList {
     int v;
     LinkedList<Integer>[] adjList;
 
-    public BFSIterativeAdjList(int v) {
+    public DFSRecursiveAdjList(int v) {
         this.v = v;
         adjList = new LinkedList[v];
         for (int i = 0; i < v; i++) {
@@ -24,37 +22,29 @@ class BFSIterativeAdjList {
         }
     }
 
-    public void bfs() {
+    public void dfs() {
         boolean[] visited = new boolean[v];
-        for (int i = 0; i < v; i++) {
+        for (int i = 0; i < v; ++i) {
             if (!visited[i]) {
-                bfsUtil(visited, i);
+                dfsUtil(visited, i);
             }
         }
     }
 
-    private void bfsUtil(boolean[] visited, int source) {
+    private void dfsUtil(boolean[] visited, int source) {
         visited[source] = true;
-        Queue<Integer> queue = new LinkedList<>();
-        queue.offer(source);
-        while(!queue.isEmpty()) {
-            int node = queue.poll();
-            System.out.print(node + " ");
-            for (int neighbor : adjList[node]) {
-                if (!visited[neighbor]) {
-                    queue.offer(neighbor);
-                    visited[neighbor] = true;
-                }
+        System.out.print(source + " ");
+        for (int neighbor : adjList[source]) {
+            if (!visited[neighbor]) {
+                dfsUtil(visited, neighbor);
             }
         }
     }
-}
 
-public class BFSIterativeAdjListClient {
     public static void main(String[] args) {
-        BFSIterativeAdjList graph = new BFSIterativeAdjList(10);
+        DFSRecursiveAdjList graph = new DFSRecursiveAdjList(10);
         int[][] edges = {{0, 1}, {0, 2}, {1, 3}, {1, 4}, {4, 5}, {2, 5}, {2, 6}, {2, 7}, {8, 9}};
         graph.populateGraph(edges);
-        graph.bfs(); // 0 1 2 3 4 5 6 7 8 9
+        graph.dfs(); // 0 1 3 4 5 2 6 7 8 9
     }
 }

@@ -1,4 +1,4 @@
-class QuickUnion {
+public class QuickUnion {
     // Array to maintain the root of each nodes
     private final int[] root;
 
@@ -36,9 +36,7 @@ class QuickUnion {
     public boolean connected(int x, int y) {
         return find(x) == find(y);
     }
-}
 
-public class QuickUnionClient {
     public static void main(String[] args) throws Exception {
         QuickUnion quickUnion = new QuickUnion(10);
         // 1-2-5-6-7 3-8-9 4
@@ -56,3 +54,4 @@ public class QuickUnionClient {
         System.out.println(quickUnion.connected(4, 9)); // true
     }
 }
+
