@@ -4,16 +4,16 @@ import java.util.Arrays;
 
 public class DijkstrasAlgorithm {
     int v; // number of vertices
-    int[][] graph; // adjacency matrix
+    int[][] adjacencyMatrix; // adjacency matrix
 
     public DijkstrasAlgorithm(int v) {
         this.v = v;
-        graph = new int[v][v];
+        adjacencyMatrix = new int[v][v];
     }
 
     public void addEdge(int u, int v, int w) {
-        graph[u][v] = w;
-        graph[v][u] = w;
+        adjacencyMatrix[u][v] = w;
+        adjacencyMatrix[v][u] = w;
     }
 
     public void populateGraph(int[][] edges) {
@@ -31,8 +31,8 @@ public class DijkstrasAlgorithm {
             int minVertex = findMinVertex(distance, visited);
             visited[minVertex] = true;
             for (int j = 0; j < v; j++) {
-                if (graph[minVertex][j] != 0 && !visited[j]) {
-                    int newDistance = distance[minVertex] + graph[minVertex][j];
+                if (adjacencyMatrix[minVertex][j] != 0 && !visited[j]) {
+                    int newDistance = distance[minVertex] + adjacencyMatrix[minVertex][j];
                     if (newDistance < distance[j]) {
                         distance[j] = newDistance;
                     }
