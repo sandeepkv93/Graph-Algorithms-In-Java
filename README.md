@@ -13,3 +13,4 @@
 | 9 | [Union Find - Union By Rank](src/UnionByRankClient.java)                                          |
 | 10 | [Union Find with Path Compression](src/PathCompressionClient.java)                                |
 | 11 | [Optimized Union Find](src/OptimizedUnionFindClient.java)                                         |
+| 12 | [Topological Sorting Using DFS](src/TopologicalSortingDFS.java)                                   |
