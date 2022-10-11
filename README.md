@@ -20,3 +20,5 @@
 | 16 | [Dijkstra's Algorithm - Shortest Path from source to all vertices](src/DijkstrasAlgorithm.java)                       |
 | 17 | [Floyd Warshall's Algorithm - Shortest Path from every vertex to every other vertex](src/FloydWarshallAlgorithm.java) |
 | 18 | [Is Graph Bipartite?](src/IsGraphBiPartite.java)                                                                      |
+| 19 | [Kruskal's Algorithm - Minimum Spanning Tree](src/MinimumSpanningTreeKruskals.java)                                   |
+| 20 | [Prim's Algorithm - Minimum Spanning Tree](src/MinimumSpanningTreePrims.java)                                         |
