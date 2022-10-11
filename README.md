@@ -15,3 +15,4 @@
 | 11 | [Optimized Union Find](src/UnionFind.java)                                                  |
 | 12 | [Topological Sorting Using DFS](src/TopologicalSortingDFS.java)                             |
 | 13 | [Topological Sorting Using Kahn's BFS Algorithm](src/TopologicalSortingKahnsBFS.java)       |
+| 14 | [Detect Cycle in a Directed Graph](src/DetectCycleInDirectedGraph.java)                     |
