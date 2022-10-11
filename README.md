@@ -22,3 +22,7 @@
 | 18 | [Is Graph Bipartite?](src/IsGraphBiPartite.java)                                                                      |
 | 19 | [Kruskal's Algorithm - Minimum Spanning Tree](src/MinimumSpanningTreeKruskals.java)                                   |
 | 20 | [Prim's Algorithm - Minimum Spanning Tree](src/MinimumSpanningTreePrims.java)                                         |
+| 21 | [Bellman Ford's Algorithm - Shortest Path from source to all vertices](src/BellmanFordAlgorithm.java)                 |
+| 22 | [Johnson's Algorithm - Shortest Path from every vertex to every other vertex](src/JohnsonAlgorithm.java)              |
+| 23 | [A* Search Algorithm](src/AStarSearch.java)                                                                           |
+| 24 | [Graph Coloring](src/GraphColoring.java)                                                                              |
