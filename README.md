@@ -16,4 +16,5 @@
 | 12 | [Topological Sorting Using DFS](src/TopologicalSortingDFS.java)                             |
 | 13 | [Topological Sorting Using Kahn's BFS Algorithm](src/TopologicalSortingKahnsBFS.java)       |
 | 14 | [Detect Cycle in a Directed Graph](src/DetectCycleInDirectedGraph.java)                     |
-| 15 | [Detect Cycle in an Undirected Graph](src/DetectCycleInUndirectedGraph.java)               |
+| 15 | [Detect Cycle in an Undirected Graph](src/DetectCycleInUndirectedGraph.java)                |
+| 16 | [Dijkstra's Algorithm - Shortest Path from source to all vertices](src/DijkstrasAlgorithm.java)|
