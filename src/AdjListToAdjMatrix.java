@@ -3,33 +3,34 @@ import java.util.List;
 
 public class AdjListToAdjMatrix {
     /*
-        1. Create an array of ArrayLists, with the size of the matrix.
-        2. For each row in the matrix, create a new ArrayList.
-        3. For each column in the row, if the value is 1, add the index of the column to
-        the ArrayList.
-        4. Return the array of ArrayLists.
+        1. Makes an empty matrix of size adjacencyList.length x adjacencyList.length
+        2. Iterates through the adjacency list and sets
+        matrix[i][adjacencyList[i].get(j)] to 1
+        3. Returns the matrix
     */
-    public List<Integer>[] getAdjacenceyListFromAdjacencyMatrix(int[][] matrix) {
-        List<Integer>[] adjList = new ArrayList[matrix.length];
-        for (int i = 0; i < matrix.length; i++) {
-            adjList[i] = new ArrayList<>();
-            for (int j = 0; j < matrix[i].length; j++) {
-                if (matrix[i][j] == 1) {
-                    adjList[i].add(j);
-                }
+    public int[][] getAdjacencyMatrixFromAdjacencyList(List<Integer>[] adjacencyList) {
+        int[][] matrix = new int[adjacencyList.length][adjacencyList.length];
+        for (int i = 0; i < adjacencyList.length; i++) {
+            for (int j = 0; j < adjacencyList[i].size(); j++) {
+                matrix[i][adjacencyList[i].get(j)] = 1;
             }
         }
-        return adjList;
+        return matrix;
     }
 
     public static void main(String[] args) {
         AdjListToAdjMatrix obj = new AdjListToAdjMatrix();
-        int[][] matrix = {{0, 1, 1, 1, 0, 0}, {1, 0, 1, 0, 0, 0}, {1, 1, 0, 1, 0, 0}, {1, 0, 1, 0, 1, 0}, {0, 0, 0, 1, 0, 1}, {0, 0, 0, 0, 1, 0}};
-        List<Integer>[] adjList = obj.getAdjacenceyListFromAdjacencyMatrix(matrix);
-        for (int i = 0; i < adjList.length; i++) {
-            System.out.print(i + " ");
-            for (int j = 0; j < adjList[i].size(); j++) {
-                System.out.print(adjList[i].get(j) + " ");
+        List<Integer>[] adjList = new List[6];
+        adjList[0] = List.of(1, 2, 3);
+        adjList[1] = List.of(0, 2);
+        adjList[2] = List.of(0, 1, 3);
+        adjList[3] = List.of(0, 2, 4);
+        adjList[4] = List.of(3, 5);
+        adjList[5] = List.of(4);
+        int[][] matrix = obj.getAdjacencyMatrixFromAdjacencyList(adjList);
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print(matrix[i][j] + " ");
             }
             System.out.println();
         }
