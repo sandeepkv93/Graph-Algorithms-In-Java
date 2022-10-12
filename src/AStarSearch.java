@@ -21,7 +21,16 @@ public class AStarSearch {
         }
     }
 
-    // A* Search Algorithm with Manhattan Distance Heuristic
+    /*
+        1. The first step is to find the x and y coordinates of the source and
+           destination. 
+        2. The x and y coordinates of the source and destination are calculated
+            using the formula: x = index / 3 y = index % 3
+        3. The x and y coordinates of the source and destination can be used to
+            calculate the manhattan distance as:
+
+            manhattan distance = |x1 - x2| + |y1 - y2|
+    */
     private int manhattanDistance(int source, int destination) {
         int x1 = source / 3;
         int y1 = source % 3;
@@ -30,6 +39,20 @@ public class AStarSearch {
         return Math.abs(x1 - x2) + Math.abs(y1 - y2);
     }
 
+
+    /*
+        1. Create a distance array, where distance[i] is the distance from
+           source to i.
+        2. Initialize all distances with MAX_VALUE.
+        3. Set distance[source] = 0.
+        4. Add source to a priority queue, where the priority is the distance
+           from source to i + manhattanDistance(i, destination).
+        5. While the queue is not empty, poll the first element, u, and for each
+           i in the graph, if there is an edge from u to i and distance[u] is
+           not MAX_VALUE and distance[u] + edge(u, i) < distance[i], set
+           distance[i] = distance[u] + edge(u, i) and add i to the queue.
+        6. Print the distance array. 
+    */    
     public void shortestPath(int source, int destination) {
         int[] distance = new int[v];
         for (int i = 0; i < v; i++) {
