@@ -1,5 +1,15 @@
 # Graph Algorithms in Java
 
+## Introduction
+| No. | Algorithm                                                         |
+| --- |-------------------------------------------------------------------|
+| 1   | [Adjacency List to Adjacency Matrix](src/AdjListToAdjMatrix.java) |
+| 2   | [Adjacency Matrix to Adjacency List](src/AdjMatrixToAdjList.java) |
+| 3   | [Edges to Adjacency List](src/EdgesToAdjList.java)                |
+| 4   | [Edges to Adjacency Matrix](src/EdgesToAdjMatrix.java)            |
+
+## Algorithms
+
 | No. | Algorithm                                                                                                             |
 | --- |-----------------------------------------------------------------------------------------------------------------------|
 | 1 | [Depth First Search (DFS) Recursive using Adjacency Matrix](src/DFSRecursiveAdjMatrix.java)                           |
