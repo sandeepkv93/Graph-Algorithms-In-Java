@@ -30,7 +30,15 @@ To use the code in another Java program, simply import the `AdjMatrixToAdjList` 
 ## Sample Input
 
 ```java
-int[][] matrix = {{0, 1, 1, 1, 0, 0}, {1, 0, 1, 0, 0, 0}, {1, 1, 0, 1, 0, 0}, {1, 0, 1, 0, 1, 0}, {0, 0, 0, 1, 0, 1}, {0, 0, 0, 0, 1, 0}};
+int[][] matrix = {
+    {0, 1, 1, 1, 0, 0},
+    {1, 0, 1, 0, 0, 0},
+    {1, 1, 0, 1, 0, 0},
+    {1, 0, 1, 0, 1, 0},
+    {0, 0, 0, 1, 0, 1},
+    {0, 0, 0, 0, 1, 0}
+};
+
 List<Integer>[] adjList = obj.getAdjacenceyListFromAdjacencyMatrix(matrix);
 ```
 

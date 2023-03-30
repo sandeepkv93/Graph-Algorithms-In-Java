@@ -1,4 +1,4 @@
-## Adjacency List to Adjacency Matrix Conversion
+# Adjacency List to Adjacency Matrix Conversion
 
 This program aims to convert an adjacency list into its corresponding adjacency matrix representation.
 
