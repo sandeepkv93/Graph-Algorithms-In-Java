@@ -5,7 +5,7 @@
 | No. | Algorithm with Explanation                                              | Code                                                   |
 | --- | ----------------------------------------------------------------------- | ------------------------------------------------------ |
 | 1   | [Adjacency List to Adjacency Matrix](explanation/AdjListToAdjMatrix.md) | [AdjListToAdjMatrix.java](src/AdjListToAdjMatrix.java) |
-| 2   | [Adjacency Matrix to Adjacency List](src/AdjMatrixToAdjList.java)       |
+| 2   | [Adjacency Matrix to Adjacency List](explanation/AdjMatrixToAdjList.md) | [AdjMatrixToAdjList.java](src/AdjMatrixToAdjList.java) |
 | 3   | [Edges to Adjacency List](src/EdgesToAdjList.java)                      |
 | 4   | [Edges to Adjacency Matrix](src/EdgesToAdjMatrix.java)                  |
 
